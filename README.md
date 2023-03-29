@@ -1,4 +1,4 @@
-Step pattern : Card
+Step pattern : Pentagon Arrow Process
 ===
 ```
 Create : 2023.03.29
