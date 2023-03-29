@@ -7,7 +7,7 @@ Author : Yugeta.Koji
 ![banner](banner.png)
 
 # Summary
-- LPデザインなどで簡単にコピペで使えることを目的に、ステップパターンの表示デザインをブランチ毎分けて登録しています。
+- 丸を繋ぐ基本的なステップ表示方式です。
 
 # Blog
 - https://blog.myntinc.com/2023/04/css-lp-01.html
