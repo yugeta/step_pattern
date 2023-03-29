@@ -10,4 +10,4 @@ Author : Yugeta.Koji
 - 色とアイコンをセンスよく表現できます。
 
 # Blog
-- https://blog.myntinc.com/2023/04/css-lp-05.html
+- https://blog.myntinc.com/2023/04/css-lp-06.html
