@@ -1,0 +1,123 @@
+html,body{
+  padding:0;
+  margin:0;
+}
+
+.step-word,
+.step-word *,
+.step-word *::before,
+.step-word *::after{
+  -webkit-box-sizing : border-box;
+     -moz-box-sizing : border-box;
+       -o-box-sizing : border-box;
+      -ms-box-sizing : border-box;
+          box-sizing : border-box;
+}
+
+.step-word,
+.step-word li{
+  list-style : none;
+  margin     : 0;
+  padding    : 0;
+}
+
+.step-word{
+  --size-circle           : 150px;
+  --size-gap              : 30px;
+  --size-num              : 60px;
+  width                   : 100%;
+  max-width               : 1000px;
+  margin                  : 20px auto;
+  padding                 : var(--size-gap);
+  border                  : 1px solid black;
+  display                 : flex;
+  gap                     : var(--size-gap);
+  background-color        : #CCC;
+  z-index                 : 0;
+  position                : relative;
+  -webkit-align-items     : center;
+          align-items     : center;
+  -webkit-justify-content : space-between;
+          justify-content : space-between;
+}
+
+.step-word li{
+  padding                 : 10px;
+  width                   : var(--size-circle);
+  height                  : var(--size-circle);
+  text-align              : center;
+  position                : relative;
+  display                 : flex;
+  flex-direction          : column;
+  -webkit-align-items     : center;
+          align-items     : center;
+  -webkit-justify-content : space-between;
+          justify-content : center;
+
+  
+}
+.step-word li::before{
+  content          : '';
+  width            : var(--size-circle);
+  height           : var(--size-circle);
+  border           : 1px solid black;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  z-index          : -1;
+  border-radius    : 50%;
+  background-color : white;
+  
+}
+
+.step-word{
+  counter-reset     :num 0;
+}
+.step-word > li{
+  counter-increment : num;
+}
+.step-word > li .num::before{
+  content           : counter(num);
+  font-size         : var(--size-num);
+  line-height       : var(--size-num);
+  font-family       : "Ibarra Real Nova", serif;
+}
+
+
+@media(max-width : 768px){
+  .step-word{
+    flex-direction   : column;
+    width            : calc(var(--size-circle) + (var(--size-gap) * 2));
+  }
+
+  .step-word::before{
+    content          : '';
+    position         : absolute;
+    width            : 1px;
+    height           : calc(100% - (var(--size-gap) * 2));
+    left             : 50%;
+    top              : var(--size-gap);
+    z-index          : -2;
+    background-color : black;
+    transform        : translate(-50%,0);
+  }
+}
+
+@media(min-width : 769px){
+  .step-word{
+    flex-direction : row;
+    height         : 200px;
+  }
+
+  .step-word::before{
+    content          : '';
+    position         : absolute;
+    height           : 1px;
+    width            : calc(100% - (var(--size-gap) * 2));
+    top              : 50%;
+    left             : var(--size-gap);
+    z-index          : -2;
+    background-color : black;
+    transform        : translate(0,-50%);
+  }
+}
