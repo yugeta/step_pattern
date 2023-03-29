@@ -7,7 +7,7 @@ Author : Yugeta.Koji
 ![banner](banner.png)
 
 # Summary
-- カードにナンバリングする、シンプルな表示タイプです。
+- プレゼンなどでよく使われる、「ペンタゴン・アロー・プロセス」タイプのステップデザインです。
 
 # Blog
-- https://blog.myntinc.com/2023/04/css-lp-03.html
+- https://blog.myntinc.com/2023/04/css-lp-04.html
